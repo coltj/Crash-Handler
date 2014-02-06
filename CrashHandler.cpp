@@ -16,13 +16,6 @@ LONG WINAPI WriteDump(EXCEPTION_POINTERS* pException)
 		  
 			MINIDUMP_TYPE mdt       = (MINIDUMP_TYPE)(MiniDumpNormal | MiniDumpWithDataSegs | MiniDumpWithIndirectlyReferencedMemory | MiniDumpWithFullMemory);
 
-		//	MINIDUMP_USER_STREAM_INFORMATION usi;
-		//	MINIDUMP_USER_STREAM us;
-
-		//	us.T
-
-		//	usi.UserStreamArray = &us;
-		//	usi.UserStreamCount = 1;
 		  
 			BOOL rv = MiniDumpWriteDump(GetCurrentProcess(), GetCurrentProcessId(), hFile, mdt, &mdei, 0, 0); 
 		  
